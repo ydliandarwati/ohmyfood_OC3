@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Oh my food! Découvrez votre restaurant d'exception!</title>
+    
+    <!--connecting to site font Shrikhand and Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <!--Kit Icon Fontawesome-->
+    <script src="https://kit.fontawesome.com/aaef80e60d.js" crossorigin="anonymous"></script>
+    <!--call for css file-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body>    
+    <!--HEADER of page-->
+    <header>
+        <img class="header_logo" src="assets/images/logo/ohmyfood.png" alt="logo-ohmyfood">
+    </header>
+    <!--MAIN of page-->
+    <main>
+        <div class="location">
+            <form class="location_form" action="#" method="post">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="search" name="location" class="location_input" value="Paris, Belleville">
+            </form>
+        </div>
+
+        <!--Explore Restaurant-->
+        <section class="explore">
+            <div class="explore_title">
+                <h1> Réservez le menu qui vous convient </h1>
+            </div>
+            <div class="explore_subtitle">
+                <p> Découvrez des restaurant d'exception, sélectionnés par nos soins.</p>
+            </div>
+            <button class="main-btn">Explorer nos restaurants</button>
+        </section>
+
+        <!--Functionnement Restaurant-->
+        <section class="function">
+            <div class="function_title">
+                <h1>Functionnement</h1>
+            </div>
+
+            <div class="function_list">
+                <div class="function_list_item">
+                    <div class="function_list_item_number">1</div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h2>Choissisez un restaurant</h2>
+                </div>
+
+                <div class="function_list_item">
+                    <div class="function_list_item_number">2</div>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <h2>Composez votre menu</h2>
+                </div>
+
+                <div class="function_list_item">
+                    <div class="function_list_item_number">3</div>
+                    <i class="fa-solid fa-store"></i>
+                    <h2>Choissisez un restaurant</h2>
+                </div>
+            </div>
+        </section>
+        <!--End of Function Restaurant Section-->
+
+        <!--Section List of Restaurants-->
+        <section class="restaurants">
+            <div class="restaurants_title">
+                <h1>Restaurants</h1>
+            </div>
+
+            <div class="restaurants_list">
+                <div class="restaurants_list_card">
+                    <div class="restaurants_list_card_image">
+                        <a href="restaurant-pages/page1restaurant.html">
+                        <img src="./assets/images/restaurants/la-pallete.jpg" alt="La pallete du gout">  
+                        </a>
+                        <div class="restaurants_list_card_new">Nouveau</div>
+                    </div>
+
+                    <div class="restaurants_list_card_content">
+                        <div class="restaurants_list_card_name">
+                            <h3>La pallete du gout</h3>
+                            <p>Menilmontant</p> 
+                        </div>
+    
+                        <div>
+                            <label class="like-btn">
+                                <input type="checkbox" name="button_like">
+                                <i class="fa-regular fa-heart like-unselected"></i>
+                                <i class="fa-solid fa-heart like-selected "></i>
+                            </label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="restaurants_list_card">
+                    <div class="restaurants_list_card_image">
+                        <a href="restaurant-pages/page3restaurant.html">
+                        <img src="./assets/images/restaurants/la-note.jpg" alt="La note enhcantéé">  
+                        </a>
+                        <div class="restaurants_list_card_new">Nouveau</div>
+                    </div>
+
+                    <div class="restaurants_list_card_content">
+                        <div class="restaurants_list_card_name">
+                            <h3>La note enhcantéé</h3>
+                            <p>Charonne</p> 
+                        </div>
+
+                        <div>
+                            <label class="like-btn">
+                                <input type="checkbox" name="button_like">
+                                <i class="fa-regular fa-heart like-unselected"></i>
+                                <i class="fa-solid fa-heart like-selected "></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="restaurants_list_card">
+                    <div class="restaurants_list_card_image">
+                        <a href="restaurant-pages/page4restaurant.html">
+                        <img src="./assets/images/restaurants/ala-francais.jpg" alt="A la francais">  
+                        </a>
+                    </div>
+
+                    <div class="restaurants_list_card_content">
+                        <div class="restaurants_list_card_name">
+                            <h3>A la francais</h3>
+                            <p>Cité Rouge</p> 
+                        </div>
+
+                        <div>
+                            <label class="like-btn">
+                                <input type="checkbox" name="button_like">
+                                <i class="fa-regular fa-heart like-unselected"></i>
+                                <i class="fa-solid fa-heart like-selected "></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="restaurants_list_card">
+                    <div class="restaurants_list_card_image">
+                        <a href="restaurant-pages/page2restaurant.html">
+                        <img src="./assets/images/restaurants/le-delice.jpg" alt="La delice des sens">  
+                        </a>
+                    </div>
+
+                    <div class="restaurants_list_card_content">
+
+                        <div class="restaurants_list_card_name">
+                            <h3>La delice des sens</h3>
+                            <p>Folié-Méncrout</p> 
+                        </div>
+
+                        <div>
+                            <label class="like-btn">
+                                <input type="checkbox" name="button_like">
+                                <i class="fa-regular fa-heart like-unselected"></i>
+                                <i class="fa-solid fa-heart like-selected "></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer_container">
+            <!-- <img class="footer_logo" src="assets/images/logo/ohmyfood.png" alt="ohmyfood-logo"> -->
+            <div>
+                <p class="footer_title">Ohmyfood</p>
+            </div>
+            <ul class="footer_links">
+                <li><a href="#" class="footer_link"><i class="fa-solid fa-utensils footer_link_icon"></i>Proposer un restaurant</a></li>
+                <li><a href="#" class="footer_link"><i class="fa-solid fa-handshake-angle footer_link_icon"></i>Devenir partenaire</a></li>
+                <li><a href="#" class="footer_link">Mentions légales</a></li>
+                <li><a href="mailto:ohmyfood@contact.com" class="footer_link">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
