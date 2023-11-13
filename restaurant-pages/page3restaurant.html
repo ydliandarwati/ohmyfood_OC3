@@ -10,10 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@7x`00&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <!--Kit Icon Fontawesome-->
     <script src="https://kit.fontawesome.com/aaef80e60d.js" crossorigin="anonymous"></script>
     <!--call for css file-->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <header>
@@ -22,27 +24,28 @@
 
 <main>
     <!--photo restaurant for header menu-->
-    <div class="photo_menu">
-        <img src="../assets/images/restaurants/la-pallete.jpg" alt="photo-card-la-pallette-du-gout">
+    <div>
+        <img class="photo_rastaurant" src="../assets/images/restaurants/la-pallete.jpg" alt="photo-card-la-pallette-du-gout">
     </div>
 
     <!--card for restaurant menu-->
-    <section class="menu_restaurant">
-        <div class="menu_restaurant_header">
-            <h1 class="menu_restaurant_header_title">
+    <section class="menu-restaurant">
+        <div class="menu-restaurant_header">
+            <h1 class="menu-restaurant_header_title">
                 La note enchantée
             </h1>
-             <!--button like-->
-            <label class="restaurant_button_like">
-                <input type="checkbox"name="button_like" id="restaurant1" value="1">
-                <i class="fa-regular fa-heart unlike"></i>
-                <i class="fa-solid fa-heart like"></i>
-            </label>
+            <div>
+                <label class="like-btn">
+                    <input type="checkbox" name="button_like">
+                    <i class="fa-regular fa-heart like-unselected"></i>
+                    <i class="fa-solid fa-heart like-selected "></i>
+                </label>
+            </div>
         </div>
 
         <div class="card_menu_restaurant_list">
-            <div class="menu_restaurant_list">
-                <h3 class="menu_restaurant_list_title">
+            <div class="menu-restaurant_list">
+                <h3 class="menu-restaurant_list_title">
                     Entrées
                 </h3>
 
@@ -123,8 +126,8 @@
                 </article>
             </div>
 
-            <div class="menu_restaurant_list">
-                <h3 class="menu_restaurant_list_title">
+            <div class="menu-restaurant_list">
+                <h3 class="menu-restaurant_list_title">
                     Plats
                 </h3>
 
@@ -187,8 +190,8 @@
             </div>
 
             
-            <div class="menu_restaurant_list">
-                <h3 class="menu_restaurant_list_title">
+            <div class="menu-restaurant_list">
+                <h3 class="menu-restaurant_list_title">
                     Desserts
                 </h3>
 
@@ -253,13 +256,16 @@
     </section>
 
     <div class="button_command">
-        <a href="#" class="command_link btn_main">Commander</a>
+        <button class="main-btn command_link ">Commander</button>
+        <!-- <a href="#" class="command_link">Commander</a> -->
     </div>
 </main>
 <footer class="footer">
     <div class="footer_container">
-        <img class="footer_logo" src="assets/images/logo/ohmyfood.png" alt="ohmyfood-logo" />
-
+        <!-- <img class="footer_logo" src="assets/images/logo/ohmyfood.png" alt="ohmyfood-logo"> -->
+        <div>
+            <p class="footer_title">Ohmyfood</p>
+        </div>
         <ul class="footer_links">
             <li><a href="#" class="footer_link"><i class="fa-solid fa-utensils footer_link_icon"></i>Proposer un restaurant</a></li>
             <li><a href="#" class="footer_link"><i class="fa-solid fa-handshake-angle footer_link_icon"></i>Devenir partenaire</a></li>

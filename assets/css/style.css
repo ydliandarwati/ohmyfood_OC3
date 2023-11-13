@@ -3,10 +3,6 @@
     font-style: normal;
     line-height: normal;      
     box-sizing: border-box;
-    /* indique au navigateur de prendre en compte la bordure et le remplissage dans la valeur définie pour la largeur
-    et la hauteur */
-    box-sizing: border-box;
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -68,8 +64,6 @@ header {
     background: var(--White, #FFF);
     /* Shadow/Badge */
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-    
-   
   }
 
 header img {
@@ -276,8 +270,12 @@ input {
 /* also display like-btn */  
 .like-btn input[type=checkbox]:checked ~ .like-selected {
     display: inline-block;
-    color: var(--btn-gradient);
-  }
+    background: var(--btn-gradient);
+    background-clip: text;
+    color: transparent;
+  } 
+
+
 /* when not checked, hide like-btn with animation */
 .like-btn input[type=checkbox], .like-btn .like-selected {
     display: none;
@@ -307,7 +305,9 @@ input {
 .footer_link_icon {
     margin-right: 1rem;
 }
-
+.fa-handshake-angle {
+    margin-right: 0.65rem;
+}
 
 
 
@@ -362,8 +362,24 @@ input {
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
 }
 
+.menu_item_desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.31rem;
+}
+
+.menu_item_price {
+    align-self: flex-end;
+}
+
+.menu_item_price_txt {
+    font-family: Roboto;
+    font-size: 0.94019rem;
+    font-weight: 700;
+}
+
 .menu_item_checked {
-    /* display: none; */
+    display: none;
 }
 
 /* .menu_item_title {
