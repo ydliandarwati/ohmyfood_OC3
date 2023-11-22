@@ -7,9 +7,7 @@
     <title> Oh my food! Découvrez votre restaurant d'exception!</title>
     
     <!--connecting to site font Shrikhand and Roboto-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
     <!--Kit Icon Fontawesome-->
     <script src="https://kit.fontawesome.com/aaef80e60d.js" crossorigin="anonymous"></script>
@@ -24,7 +22,9 @@
         <img class="header_logo" src="assets/images/logo/ohmyfood.png" alt="logo-ohmyfood">
     </header>
     <div class="loader">
-       <div class="load_spin"></div>
+        <div class="load">
+            <div class="load_spin"></div>
+        </div>
     </div>
     <!--MAIN of page-->
     <main>
@@ -186,14 +186,17 @@
         <div class="footer_container">
             <!-- <img class="footer_logo" src="assets/images/logo/ohmyfood.png" alt="ohmyfood-logo"> -->
             <div>
-                <p class="footer_title">Ohmyfood</p>
+                <!-- <h3 class="footer_title"><a href="index.html">ohmyfood</a></h3> -->
+                <p class="footer_title">ohmyfood</p>
             </div>
+            <div class="footer_links">
             <ul class="footer_links">
-                <li><a href="#" class="footer_link"><i class="fa-solid fa-utensils footer_link_icon"></i>Proposer un restaurant</a></li>
-                <li><a href="#" class="footer_link"><i class="fa-solid fa-handshake-angle footer_link_icon"></i>Devenir partenaire</a></li>
+                <li><a href="#" class="footer_link"><i class="link_item1 fa-solid fa-utensils footer_link_icon"></i>Proposer un restaurant</a></li>
+                <li><a href="#" class="footer_link"><i class="link_item2 fa-solid fa-handshake-angle footer_link_icon"></i>Devenir partenaire</a></li>
                 <li><a href="#" class="footer_link">Mentions légales</a></li>
                 <li><a href="mailto:ohmyfood@contact.com" class="footer_link">Contact</a></li>
             </ul>
+            </div>
         </div>
     </footer>
 </body>
