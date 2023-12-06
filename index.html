@@ -19,19 +19,24 @@
 <body>    
     <!--HEADER of page-->
     <header>
+        <!--logo image clickable refer to page index.html-->
         <img class="header_logo" src="assets/images/logo/ohmyfood.png" alt="logo-ohmyfood">
     </header>
+
+    <!--animation spinner when load the main page-->
     <div class="loader">
         <div class="load">
             <div class="load_spin"></div>
         </div>
     </div>
+
     <!--MAIN of page-->
     <main>
+        <!--location editable by the user-->
         <div class="location">
             <form class="location_form" action="#" method="post">
                 <i class="fa-solid fa-location-dot"></i>
-                <input type="search" name="location" class="location_input" value="Paris, Belleville">
+                <input type="search" name="location" class="location_input" placeholder="Paris, Belleville">
             </form>
         </div>
 
@@ -43,11 +48,12 @@
             <div class="explore_subtitle">
                 <p> Découvrez des restaurant d'exception, sélectionnés par nos soins.</p>
             </div>
+            <!--click button explorer direct user to the list of restaurant-->
             <a href="#restaurants" class="main-btn">Explorer nos restaurants</a>
               
         </section>
 
-        <!--Functionnement Restaurant-->
+        <!--List Functionnement Restaurant-->
         <section class="function">
             <div class="function_title">
                 <h1>Functionnement</h1>
@@ -69,7 +75,7 @@
                 <div class="function_list_item">
                     <div class="function_list_item_number">3</div>
                     <i class="fa-solid fa-store"></i>
-                    <h2>Choissisez un restaurant</h2>
+                    <h2>Dégustez au restaurant</h2>
                 </div>
             </div>
         </section>
@@ -97,6 +103,7 @@
                         </div>
     
                         <div>
+                            <!--icon love for animation-->
                             <label class="like-btn">
                                 <input type="checkbox" name="button_like">
                                 <i class="fa-regular fa-heart like-unselected"></i>
@@ -184,9 +191,7 @@
     <!--FOOTER-->
     <footer class="footer">
         <div class="footer_container">
-            <!-- <img class="footer_logo" src="assets/images/logo/ohmyfood.png" alt="ohmyfood-logo"> -->
             <div>
-                <!-- <h3 class="footer_title"><a href="index.html">ohmyfood</a></h3> -->
                 <p class="footer_title">ohmyfood</p>
             </div>
             <div class="footer_links">

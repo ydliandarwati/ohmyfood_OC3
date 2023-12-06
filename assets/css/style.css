@@ -61,6 +61,11 @@ li {
     list-style-type: none;
   }
 
+.fa-circle-check {
+    color: white;
+    font-size: 20px;
+}
+
   .loader {
     background: rgba(255, 255, 255, 0.85);
     position: fixed;
@@ -71,7 +76,7 @@ li {
     animation: loadscreen 1s 2s forwards;
   }
 
-  .load {
+.load {
     position: absolute;
     top: 35%;
     left: 50%;
@@ -80,9 +85,9 @@ li {
     justify-content: space-around;
     width: 20vh;
     height: 15vh;
-  }
+}
   
-  @keyframes loadscreen {
+@keyframes loadscreen {
     from {
       opacity: 1;
     }
@@ -110,21 +115,22 @@ li {
     100%{
       transform: rotate(360deg);
     }
-  }
+}
+
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--White, #FFF);
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  }
+}
 
 header img {
-    /* width: 200px; */
+    width: 200px;
     /* padding: 15px 0px 15px 0px;   */
     /* margin-top: 0.875rem;
     margin-bottom: 0.4rem; */
-    width: 45%;
+    /* width: 45%; */
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -143,7 +149,7 @@ header img {
 
 .location {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--main-bg-color); 
     padding-top: 15px;
@@ -152,8 +158,8 @@ header img {
 
 .location_form {
     display: flex;
+    justify-content: center;
     gap: 1rem;
-    /* padding: 1rem 0 1rem 0; */
 }
 
 input { 
@@ -167,6 +173,10 @@ input {
     text-align: center;
 }
 
+::placeholder {
+    color: black;
+    opacity: 1;
+  }
 
 
 .explore {
@@ -215,20 +225,22 @@ input {
     align-items: center;
     margin: 30px;
     color: white;
-    background: linear-gradient(#FF79DA, #9356DC);
-    border-radius: 40px;
-    box-shadow: 2px 5px 20px #a7a7a7;
     /* width: 14rem; */
     width: 320px;
     height: 70px;
     /* height: 3.125rem;  */
     font-size: 1rem;
-    /* border-radius: 1.6rem;
-    color: white;
+    border-radius: 1.6rem;
     background: var(--btn-gradient);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
+/* hovering button makes it brighter/bigger and with bigger/draker shadow */
+.main-btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+    box-shadow: 3px 6px 20px #898989; 
+  }
 .function {
     display: flex;
     flex-direction: column;
@@ -303,7 +315,7 @@ input {
 
 /* .restaurants_list_card:hover {
     transform: scale(1.05); 
-    transition: 1s;
+    transition: 1200ms;
 } */
 
 .restaurants_list_card_image {
@@ -355,14 +367,9 @@ input {
     background-clip: text;
     color: transparent;
   } 
-
-
 /* when not checked, hide like-btn with animation */
 .like-btn input[type=checkbox], .like-btn .like-selected {
     display: none;
-    /* animation: like 0.5s;
-    animation-fill-mode: forwards;
-    transition: all 0.3s linear 0s; */
   }
 
   
@@ -534,7 +541,7 @@ input {
 
 .menu_item:hover .menu_item_price {
     margin-right: 20%;
-    transition-duration: 1500ms;
+    transition-duration: 200ms;
 }
 
 .menu_item:hover .menu_item_checked {
@@ -542,10 +549,6 @@ input {
     right: 0rem;
 }
 
-
-/* .menu_item:hover .menu_card_check_icon {
-    transform: rotate(0deg);
-} */
 
 .menu_item_checked {
     position: absolute;
@@ -556,7 +559,7 @@ input {
     background-color: var(--green-btn);
     height: 80px;
     width: 15%;
-    transition-duration: 1200ms;
+    transition-duration: 200ms;
     border-radius: 0px 15px 15px 0px;
     overflow: hidden;
   }
@@ -595,7 +598,21 @@ input {
         gap: 1.5rem;
     }
     
-
+    .like-btn input[type=checkbox]:hover ~ .like-unselected {
+        display: none;
+      }
+      input[type=checkbox]:hover ~ .like-selected {
+        display: inline-block;
+        background: var(--btn-gradient);
+        background-clip: text;
+        color: transparent;
+      } 
+    
+    
+    /* when not checked, hide like-btn with animation */
+    .like-btn input[type=checkbox], .like-btn .like-selected {
+        display: none;
+      }
     .restaurants {
         padding-left: 15%;
         padding-right: 15%;
@@ -605,7 +622,10 @@ input {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 3.12rem 6.25rem;
     }
-
+    .menu-restaurant_header {
+        justify-content: center;
+        gap: 3rem;
+    }
     
     .menu-restaurant {
         margin-left: 10%;
@@ -616,6 +636,8 @@ input {
         margin-left: 12%;
         margin-right: 12%;
     }
+
+
     .footer_container{
         display: flex;
         flex-direction: row-reverse;
@@ -630,4 +652,34 @@ input {
 
 
 }
+/* .menu-restaurant_list .menu_item > .menu_item_checkedd {
+    background: blue;
+    color: white;
+    visibility: hidden;
+    transition: visibility 0s 1000s;
+  }
   
+  .menu-restaurant_list .menu_item:active > .menu_item_checkedd {
+    visibility: visible;
+  }
+  
+  .menu-restaurant_list:active .menu_item > .menu_item_checkedd  {
+    transition-property: none;
+  }  */
+
+
+  /* .menu_item{
+    outline:none;
+  }
+  
+  .menu_item > .menu_item_checkedd {
+    background: blue;
+    width: 15em;
+    position: relative;
+    transition:1s;
+  }
+  .menu_item:focus > .menu_item_checkedd {
+    background: red;
+    transform: translate(60px, -40px);
+    width: 40em;
+  } */
