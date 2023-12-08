@@ -66,48 +66,54 @@ li {
     font-size: 20px;
 }
 
+/*for first opacity before animation*/
   .loader {
     background: rgba(255, 255, 255, 0.85);
-    position: fixed;
+    position: fixed; /* so the loader moves with scroll */
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 100;
+    z-index: 100; /* to take care of overlapping */
     animation: loadscreen 1s 2s forwards;
   }
 
-.load {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: space-around;
-    width: 20vh;
-    height: 15vh;
-}
-  
 @keyframes loadscreen {
     from {
-      opacity: 1;
+      opacity: 1; /*first opacity (not transparant)*/
     }
     to {
-      opacity: 0;
+      opacity: 0; /*final opacity almost not visible (transparant), without this, page will not stop loading*/
       visibility: hidden;
     }
 }
 
+/*div container for spinner */
+.load {
+    position: absolute; /*spinner follow the scroll*/
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*to move spinner in center of the page */
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    height: 15%;
+}
+
+/*the appearance of spinner */
+/* based on https://blog.logrocket.com/animated-page-loaders-css/ */
 .load_spin {
-    position: absolute;
+    position: absolute; /*spinner follow the scroll*/
     width: 200px;
     height: 200px;
-    border-radius: 100px;
+    border-radius: 100px; 
     border-top: 6px solid var(--main-color);
     border-left: 4px solid var(--green-btn);
     border-bottom: 2px solid #FF79DA;
     border-right: transparent;
-    animation: spinner 0.8s linear infinite;
+    animation: spinner 0.8s linear infinite; /*turning forever*/
 }
+
+/*define rotation of spinner*/
 @keyframes spinner{
     0%{
       transform: rotate(0deg);
@@ -145,7 +151,6 @@ header img {
     color: black;
   }
  
-  
 
 .location {
     display: flex;
@@ -226,21 +231,22 @@ input {
     margin: 30px;
     color: white;
     /* width: 14rem; */
-    width: 320px;
-    height: 70px;
-    /* height: 3.125rem;  */
+    width: 220px;
+    height: 50px;
+    padding: 10px;
     font-size: 1rem;
-    border-radius: 1.6rem;
+    border-radius: 30px;
     background: var(--btn-gradient);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-/* hovering button makes it brighter/bigger and with bigger/draker shadow */
+/* hovering button makes it brighter/bigger and with bigger/darker shadow */
 .main-btn:hover {
     filter: brightness(1.1);
     transform: scale(1.1);
     box-shadow: 3px 6px 20px #898989; 
   }
+
 .function {
     display: flex;
     flex-direction: column;
@@ -290,7 +296,6 @@ input {
     background-color: var(--bg-semigrey);
 }
 
-
 .restaurants_title {
     margin-bottom: 1.63rem;
 }
@@ -323,7 +328,6 @@ input {
 }
 
 
-      
 .restaurants_list_card_new {
     position: absolute;
     right: 12px;
@@ -349,8 +353,6 @@ input {
     padding-right: 1.5rem; 
 }
 
-
-
 .like-btn {
     font-size: 25px;
     cursor: pointer;
@@ -362,12 +364,14 @@ input {
   }
 /* also display like-btn */  
 .like-btn input[type=checkbox]:checked ~ .like-selected {
-    display: inline-block;
+    display: inline-block; /* w block heart sizes change when like/unline */
     background: var(--btn-gradient);
+    /* trick for gradient color of i tag */
+    /* https://stackoverflow.com/questions/8384751/css-text-gradient */
     background-clip: text;
     color: transparent;
   } 
-/* when not checked, hide like-btn with animation */
+/* when not checked, hide like-btn */
 .like-btn input[type=checkbox], .like-btn .like-selected {
     display: none;
   }
@@ -460,12 +464,12 @@ input {
     width: 100%;
     gap: 0.75rem;
     background-color: var(--bg-semigrey);
-    animation: menu_item_appear 1s;
+    animation: menu_item_appear 3s;
 }
 
 @keyframes menu_item_appear {
     from {
-      transform: translateY(20px);
+      transform: translateY(40px);
       opacity: 0;
     }
     to {
@@ -539,17 +543,13 @@ input {
     font-weight: 700;
 }
 
+/* when hover, add move price to left (using margin-right) w animation */
 .menu_item:hover .menu_item_price {
     margin-right: 20%;
     transition-duration: 200ms;
 }
 
-.menu_item:hover .menu_item_checked {
-    position: absolute;
-    right: 0rem;
-}
-
-
+/* put checkmark outside page */
 .menu_item_checked {
     position: absolute;
     display: flex;
@@ -559,10 +559,16 @@ input {
     background-color: var(--green-btn);
     height: 80px;
     width: 15%;
-    transition-duration: 200ms;
     border-radius: 0px 15px 15px 0px;
     overflow: hidden;
   }
+  
+  /* when hover bring checkmark to page (from -25rem to 0rem with animation */
+  .menu_item:hover .menu_item_checked {
+    right: 0rem;
+    transition-duration: 200ms;
+}
+
 
 
 /* .menu_item_title {
@@ -608,11 +614,8 @@ input {
         color: transparent;
       } 
     
-    
-    /* when not checked, hide like-btn with animation */
-    .like-btn input[type=checkbox], .like-btn .like-selected {
-        display: none;
-      }
+
+
     .restaurants {
         padding-left: 15%;
         padding-right: 15%;
@@ -649,37 +652,4 @@ input {
         gap: 1.5rem;
         margin-right: 2rem;
     }
-
-
 }
-/* .menu-restaurant_list .menu_item > .menu_item_checkedd {
-    background: blue;
-    color: white;
-    visibility: hidden;
-    transition: visibility 0s 1000s;
-  }
-  
-  .menu-restaurant_list .menu_item:active > .menu_item_checkedd {
-    visibility: visible;
-  }
-  
-  .menu-restaurant_list:active .menu_item > .menu_item_checkedd  {
-    transition-property: none;
-  }  */
-
-
-  /* .menu_item{
-    outline:none;
-  }
-  
-  .menu_item > .menu_item_checkedd {
-    background: blue;
-    width: 15em;
-    position: relative;
-    transition:1s;
-  }
-  .menu_item:focus > .menu_item_checkedd {
-    background: red;
-    transform: translate(60px, -40px);
-    width: 40em;
-  } */
